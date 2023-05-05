@@ -83,8 +83,13 @@ export class ThoughtsController {
     
     // DELETE /api/vi/thoughts/:id
     public async deleteThoughtById(req: Request, res: Response): Promise<void> {
-        const { id } = req.params
         try {
+            const { id } = req.params
+
+            // query
+            const text = 'DELETE FROM thought WHERE id = $1';
+            const value = [id]
+            await db.query(text, value)
 
             const status = "succes"
             const data = { message: `Deleted: ${id}`}
