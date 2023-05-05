@@ -7,5 +7,6 @@ CREATE TABLE thought (
     "like" INT DEFAULT 0,
     view INT DEFAULT 0,
     mood INT CHECK (mood >=-100 AND mood <= 100),
-    anonymous BOOLEAN
+    anonymous BOOLEAN,
+    lastEdited TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
