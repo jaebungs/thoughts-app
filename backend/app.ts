@@ -11,7 +11,9 @@ app.use(express.json())
 // API Routers
 app.use('/api/v1/thoughts', thoughtsRouter)
 
-const port = process.env.PORT || 3100
+const port = process.env.PORT || 8054
 app.listen(port, () => {
     console.log(`server is up on port ${port}`)
 })
+
+export default app

@@ -4,6 +4,10 @@ A platform to share your deepest thoughts anonymously! From your happiest memori
 
 
 ### Devlopment
+
+### Testing
+Used Jest and Supertest
+
 ##### Backend
 - npm start
 To start backend server and listen changes
